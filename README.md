@@ -152,3 +152,17 @@ Only monitor networks you own or are authorised to monitor.
 ## License
 
 [MIT](LICENSE) - Copyright (c) 2026 Arnold Rurangwa
+
+---
+
+## Maintainer verification and operational safety
+
+The monitor observes network neighbor tables and local probes; it does not guarantee the discovery of every connected device. Run only on networks you are authorized to monitor.
+
+- **Privacy:** MAC/IP records and device names can be sensitive; keep baselines and logs out of public Git commits, set retention and protect local file permissions.
+- **Accuracy:** test baseline creation, repeat runs, new-device alerts, changed IP detection, no-response scenarios and corrupted baseline handling.
+- **Compatibility:** test Windows PowerShell and Linux bash separately, including user-session notification behavior and missing optional utilities.
+- **Reliability:** guard against noisy repeat alerts, stale ARP entries and excessive network probing.
+- **Release requirements:** record passing script/static-analysis tests and a supervised real-network smoke test before publishing version claims.
+
+This lightweight utility does not require Kubernetes or continuous cloud hosting.
